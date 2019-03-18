@@ -2,7 +2,7 @@ import requests
 import os
 
 
-def check_authorization():
+def check_authorization(TOKEN):
   headers = {
     'Authorization': 'Bearer {}'.format(TOKEN)
   }
@@ -10,7 +10,7 @@ def check_authorization():
   response = requests.get(url, headers=headers)
   return response.ok
 
-def create_short_link(long_url):
+def create_short_link(long_url,TOKEN):
   data = {
   "long_url": long_url
    }
@@ -24,7 +24,7 @@ def create_short_link(long_url):
   short_link = response.json()["link"]
   return short_link
 
-def get_amount_clicks(short_link):
+def get_amount_clicks(short_link,TOKEN):
   headers = {
     'Authorization': 'Bearer {}'.format(TOKEN)
   }
@@ -36,7 +36,7 @@ def get_amount_clicks(short_link):
   amount_clicks = response.json()["total_clicks"]
   return amount_clicks
 
-def short_link(input_url):
+def short_link(input_url,TOKEN):
   url_template = 'https://api-ssl.bitly.com/v4/bitlinks/{}'
   url = url_template.format(input_url)
   headers = {
@@ -49,18 +49,18 @@ def main():
   TOKEN = os.getenv("token")
   input_url = input("Type any link: ")
 
-  if authorize():
+  if check_authorization(TOKEN):
     print ('Authorization is succes')
   else:
     print ('Error: Authorization is failed')
     quit()
 
-  if short_link(input_url):
-    amount_clicks = get_amount_clicks(input_url)
+  if short_link(input_url,TOKEN):
+    amount_clicks = get_amount_clicks(input_url,TOKEN)
     msg_tmp = 'Amount clicks : {}'
     link = msg_tmp.format(amount_clicks)
   else:
-    link = create_short_link(input_url)
+    link = create_short_link(input_url,TOKEN)
     if link is None:
       print ('Wrong link')
       quit()
