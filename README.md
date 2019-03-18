@@ -4,9 +4,9 @@
 
 1. Run the main.py
 
-'''bash
+```bash
 $ python3 "path to main.py
-'''
+```
 
 2. Input in console your Bitly short link or link you want to create as a short Bitly link
 
