@@ -1,6 +1,6 @@
 # BitlyAnalitics
 
-# Instruction for using
+## Instruction for using
 
 1. Run the main.py
 
