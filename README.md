@@ -23,7 +23,9 @@ $ python3 'path to main.py' 'your link'
 1. ```$ python3 main.py https://github.com/PopovVA```
 2. ``` Authorization is succes```
 3. ``` http://bit.ly/2FlWRqj ```
+
 or if you already have bitly link, and want to get amount clicks
+
 1. ```$ python3 main.py bit.ly/2FlWRqj```
 2. ``` Authorization is succes```
 3. ``` Amount clicks : 1 ```
