@@ -1,18 +1,31 @@
-# BitlyAnalitics
+# Bitly url shorterer
 
-## Instruction for using
+Pjocets has been created for demonstrate how working Bitly API, creating shorty link and get amount clicks
 
-1. Run the main.py
+## How to install
+
+1. Python3 should be already installed. Then use ```pip``` (or ```pip3```, if there is a conflict with Python2) to install dependencies:
 
 ```bash
-$ python3 "path to main.py
+$ pip install -r requirements.txt
 ```
 
-2. Input in console your Bitly short link or link you want to create as a short Bitly link
+2. Environments keys should be in ```.env``` file, he should contains one variable 
+```
+token=your_token_from_bitly
+```
 
-3. In console you'll see result - new short link Bitly for your link or amount clicks on link, if you send Bitly link
-
+3. Now we can run the code
+```
+$ python3 'path to main.py' 'your link'
+```
 ## Example
 
-I'm typed link for this repository "https://github.com/PopovVA/BitlyAnalitics" and me returned short link - "http://bit.ly/2Ocngtf"
-In next time i'm typed "bit.ly/2Ocngtf" and me returned amount click for this link - "Amount clicks : 1"
+1. ```$ python3 main.py https://github.com/PopovVA```
+2. ``` Authorization is succes```
+3. ``` http://bit.ly/2FlWRqj ```
+
+
+## Project goals
+
+The code is written for educational purposes on online-course for web-developers dvmn.org.
