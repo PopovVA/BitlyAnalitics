@@ -65,7 +65,7 @@ def main():
   TOKEN = os.getenv("token")
 
   if check_authorization(TOKEN):
-    print ('Authorization is succes')
+    print ('Authorization is success')
   else:
     print ('Error: Authorization is failed')
     quit()
