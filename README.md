@@ -20,15 +20,19 @@ token=your_token_from_bitly
 $ python3 'path to main.py' 'your link'
 ```
 ## Example
-1. ```$ python3 main.py https://github.com/PopovVA```
-2. ``` Authorization is succes```
-3. ``` http://bit.ly/2FlWRqj ```
+```
+$ python3 main.py https://github.com/PopovVA
+Authorization is succes
+http://bit.ly/2FlWRqj 
+```
 
 or if you already have bitly link, and want to get amount clicks
 
-1. ```$ python3 main.py bit.ly/2FlWRqj```
-2. ``` Authorization is succes```
-3. ``` Amount clicks : 1 ```
+```
+$ python3 main.py bit.ly/2FlWRqj
+Authorization is succes
+Amount clicks : 1 
+```
 
 ## Project goals
 
