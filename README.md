@@ -1,6 +1,6 @@
 # Bitly url shorterer
 
-Pjocets has been created for demonstrate how working Bitly API, creating shorty link and get amount clicks
+Pjocets was created for demonstrate how working Bitly API, creating shorty link and get amount clicks
 
 ## How to install
 
